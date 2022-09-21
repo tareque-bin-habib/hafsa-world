@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website-1</title>
+    <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+    <style>
+        /* fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,500;0,600;0,800;1,400;1,700;1,800&family=Dancing+Script&family=Fascinate&family=Lato:ital,wght@0,700;1,400&family=Poppins:ital@0;1&display=swap');
+
+        body {
+            margin: 10px 30px;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        .container {
+
+            height: 600px;
+            display: flex;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            padding-top: 70px;
+            padding-left: 40px;
+
+        }
+
+        .first {
+            font-size: 27px;
+        }
+
+        .second {
+            /* font-size: 17px; */
+        }
+
+        .half-width {
+            width: 50%;
+
+        }
+
+        .half-width img {
+            width: 80%;
+            height: 100%;
+
+
+        }
+
+        #watch {
+            background-color: #DD0000;
+            color: white;
+            border: 0;
+            padding: 10px 20px;
+            font-weight: 700;
+            border-radius: 7px;
+        }
+
+        .container-2 {
+            margin-top: 100px;
+            display: flex;
+            margin-bottom: 100px;
+        }
+
+        #match {
+            background-color: black;
+            border-radius: 10px;
+            padding: 10px;
+            height: 300px;
+        }
+
+        .upcomming {
+            color: white;
+            border-radius: 7px;
+            padding: 10px 20px;
+            color: black;
+            width: 252px;
+            height: 64px;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        #blog {
+            background-color: #DD0000;
+            border-radius: 7px;
+            padding: 10px 20px;
+            color: white;
+            width: 252px;
+            height: 64px;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .main-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-left: 30px;
+            grid-gap: 10px;
+
+        }
+
+        .box {
+            border: 1px solid rgb(243, 235, 235);
+            width: 300px;
+            height: 350px;
+        }
+
+        .box-img {
+            width: 290px;
+        }
+
+        .writting {
+            /* margin: 10px; */
+            width: 100%;
+        }
+
+        .transfer {
+            border-radius: 5px;
+            padding: 3px 6px;
+        }
+
+
+
+
+        /*-------------------------------- footer -------------------------*/
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            background-color: black;
+            color: aliceblue;
+        }
+
+        hr {
+            width: 70%;
+            opacity: 0, 5;
+        }
+
+        .footer-main {
+            height: 250px;
+        }
+
+        .footer-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-anchor {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            transform: 0.4;
+        }
+
+        .footer-parent {
+            padding-top: 10px;
+        }
+
+        .reserver {
+            font-family: 'Qwitcher Grypen', cursive;
+            font-size: 2.7rem;
+            transform: 0.8;
+        }
+
+
+        .reserver:hover {
+            color: crimson;
+            transition: 0.8s;
+        }
+
+        .footer-anchor:hover {
+            color: orangered;
+            transition: 0.6s;
+        }
+
+        .iconify-footer {
+            display: flex;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .iconify-item {
+            padding: 20px;
+            font-size: 1.5rem;
+            /* margin-bottom: 10px; */
+            transform: 0.8;
+        }
+
+        .iconify-item:hover {
+            color: red;
+            transition: 0.9s;
+        }
+
+
+        /* media query start */
+        /* PC VERSION */
+        @media only screen and (max-width: 1300px) {
+            .box {
+                width: 250px;
+                height: 290px;
+            }
+
+            .main-box {
+                grid-gap: 40px;
+            }
+
+            .box-img {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 1225px) {
+            .box {
+                width: 200px;
+                height: 290px;
+            }
+
+            .main-box {
+                grid-gap: 40px;
+            }
+
+            .box-img {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 1080px) {
+            .main-box {
+                grid-gap: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 1034px) {
+            .main-box {
+                grid-gap: 10px;
+            }
+
+            #match {
+                width: 180px;
+                height: 230px;
+            }
+
+            .upcomming {
+                width: 150px;
+                height: 50px;
+            }
+
+            #blog {
+                width: 150px;
+                height: 50px;
+            }
+
+            main p {
+                font-size: 12px;
+            }
+        }
+
+        @media only screen and (max-width: 910px) {
+            .main-box {
+                grid-gap: 10px;
+            }
+
+            #match {
+                width: 180px;
+                height: 230px;
+            }
+
+            .upcomming {
+                width: 150px;
+                height: 50px;
+            }
+
+            #blog {
+                width: 150px;
+                height: 50px;
+            }
+
+            main p {
+                font-size: 10px;
+            }
+
+            .box {
+                width: 150px;
+                height: 230px;
+            }
+
+
+            .box-img {
+                width: 100%;
+            }
+        }
+
+
+        /* Tablet version */
+        @media only screen and (max-width: 768px) {
+            .container-2 {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 0;
+            }
+
+            #match {
+                height: 300px;
+            }
+
+            .main-box {
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 5%;
+                margin-left: 0;
+                grid-gap: px;
+            }
+
+            .footer-main {
+                height: 400px;
+            }
+
+            .footer-item {
+                flex-direction: column;
+                padding-top: 10px;
+            }
+
+            .half-width img {
+                padding-left: 10%;
+            }
+
+            .container {
+                height: 400px;
+            }
+
+            #match {
+                background: none;
+                height: 150px;
+                width: 100%;
+                display: flex;
+                /* justify-content: center; */
+                align-items: center;
+            }
+
+            .box {
+                width: 280px;
+                height: 350px;
+            }
+
+            .box-img {
+                width: 100%;
+            }
+
+        }
+
+        @media only screen and (max-width: 700px) {
+            .box {
+                width: 280px;
+                height: 350px;
+            }
+
+            .box-img {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 630px) {
+            .box {
+                width: 240px;
+                height: 300px;
+            }
+
+            .box-img {
+                width: 100%;
+            }
+        }
+
+
+
+
+        /* For Small Devices */
+        @media screen and (max-width:576px) {
+            body {
+                margin: 0;
+            }
+
+            .container {
+                flex-direction: column;
+                padding-top:
+                    10%;
+                color: white;
+                padding-left: 0;
+
+
+            }
+
+            .first {
+                position: relative;
+                /* top: 500px; */
+                font-size: 15px;
+            }
+
+            /* .second {
+                font-size: 10px;
+            } */
+
+            .half-width {
+
+                position: relative;
+                /* bottom: 100px; */
+                left: 100px;
+
+            }
+
+
+            .container-2 {
+                flex-direction: column;
+            }
+
+            .main-box {
+                grid-template-columns: repeat(1, 1fr);
+                padding-left: 10%;
+
+            }
+
+            #match {
+                background: none;
+                height: 300px;
+                flex-direction: column;
+
+            }
+
+            /* footer-section */
+            footer {
+                margin-top: 5px;
+            }
+
+            .footer-main {
+                height: 400px;
+            }
+
+            .footer-anchor {
+                margin: 10px;
+            }
+
+            .footer-item {
+                display: block;
+                flex-direction: column;
+            }
+
+
+            .header-no-6 {
+                font-size: 1.5rem;
+                font-family: 'Qwitcher Grypen', cursive;
+            }
+
+            /* Fix */
+            .box {
+                width: 350px;
+                height: 380px;
+            }
+
+            .box-img {
+                width: 100%;
+            }
+
+            .container {
+                height: 600px;
+            }
+
+            .half-width img {
+                width: 100%;
+            }
+
+        }
+
+        @media only screen and (max-width: 400px) {
+            .main-box {
+                padding-left: 0;
+            }
+
+            .box {
+                width: 280px;
+                height: 320px;
+            }
+
+            .box-img {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <section class="container">
+            <div class="half-width">
+                <h1 class="first">The Greatest
+                    <br>
+                    show on the
+                    <br>
+                    earth
+                </h1>
+
+                <p>Contrary to popular belief, Lorem Ipsum is not simply
+                    <br>
+                    random text. It has roots in a piece of classical Latin literature
+                    <br>
+                    from 45 BC, making it over 2000 years old.
+                </p>
+                <button id="watch">Watch Live > </button>
+            </div>
+
+            <div class="half-width">
+                <img src="assets/Banner Image.png" alt="">
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="container-2">
+            <div id="match">
+
+                <button class="upcomming"><a href="website-2.html" target="_blank" rel="noopener noreferrer">Upcoming
+                        Match</a></button>
+
+                <br>
+
+                <button class="upcomming">All Group</button>
+
+                <br>
+
+                <button id="blog"> Blog</button>
+
+            </div>
+            <div class="main-box">
+                <div class="box">
+                    <div><img class="box-img" src="assets/Blog Image.png" alt=""></div>
+                    <div class="writting"><button class="transfer"> Transfer</button>
+                        <p class="second">Transfer Live: Chlesea in talks
+                            <br>
+                            over Kimpenbe transfer
+                        </p>
+                        <img src="assets/Time Icon.png" alt=""> <span> 10h </span>
+                        <img src="assets/Chat Icon.png" alt=""> <span> 23 </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div><img class="box-img" src="assets/Blog Image.png" alt=""></div>
+                    <div class="writting"><button class="transfer"> Transfer</button>
+                        <p>Transfer Live: Chlesea in talks
+                            <br>
+                            over Kimpenbe transfer
+                        </p>
+                        <img src="assets/Time Icon.png" alt=""> <span> 10h </span>
+                        <img src="assets/Chat Icon.png" alt=""> <span> 23 </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div><img class="box-img" src="assets/Blog Image.png" alt=""></div>
+                    <div class="writting"><button class="transfer"> Transfer</button>
+                        <p>Transfer Live: Chlesea in talks
+                            <br>
+                            over Kimpenbe transfer
+                        </p>
+                        <img src="assets/Time Icon.png" alt=""> <span> 10h </span>
+                        <img src="assets/Chat Icon.png" alt=""> <span> 23 </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div><img class="box-img" src="assets/Blog Image.png" alt=""></div>
+                    <div class="writting"><button class="transfer"> Transfer</button>
+                        <p>Transfer Live: Chlesea in talks
+                            <br>
+                            over Kimpenbe transfer
+                        </p>
+                        <img src="assets/Time Icon.png" alt=""> <span> 10h </span>
+                        <img src="assets/Chat Icon.png" alt=""> <span> 23 </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div><img class="box-img" src="assets/Blog Image.png" alt=""></div>
+                    <div class="writting"><button class="transfer"> Transfer</button>
+                        <p>Transfer Live: Chlesea in talks
+                            <br>
+                            over Kimpenbe transfer
+                        </p>
+                        <img src="assets/Time Icon.png" alt=""> <span> 10h </span>
+                        <img src="assets/Chat Icon.png" alt=""> <span> 23 </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div><img class="box-img" src="assets/Blog Image.png" alt=""></div>
+                    <div class="writting"><button class="transfer"> Transfer</button>
+                        <p>Transfer Live: Chlesea in talks
+                            <br>
+                            over Kimpenbe transfer
+                        </p>
+                        <img src="assets/Time Icon.png" alt=""> <span> 10h </span>
+                        <img src="assets/Chat Icon.png" alt=""> <span> 23 </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div><img class="box-img" src="assets/Blog Image.png" alt=""></div>
+                    <div class="writting"><button class="transfer"> Transfer</button>
+                        <p>Transfer Live: Chlesea in talks
+                            <br>
+                            over Kimpenbe transfer
+                        </p>
+                        <img src="assets/Time Icon.png" alt=""> <span> 10h </span>
+                        <img src="assets/Chat Icon.png" alt=""> <span> 23 </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div><img class="box-img" src="assets/Blog Image.png" alt=""></div>
+                    <div class="writting"><button class="transfer"> Transfer</button>
+                        <p>Transfer Live: Chlesea in talks
+                            <br>
+                            over Kimpenbe transfer
+                        </p>
+                        <img src="assets/Time Icon.png" alt=""> <span> 10h </span>
+                        <img src="assets/Chat Icon.png" alt=""> <span> 23 </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div><img class="box-img" src="assets/Blog Image.png" alt=""></div>
+                    <div class="writting"><button class="transfer"> Transfer</button>
+                        <p>Transfer Live: Chlesea in talks
+                            <br>
+                            over Kimpenbe transfer
+                        </p>
+                        <img src="assets/Time Icon.png" alt=""> <span> 10h </span>
+                        <img src="assets/Chat Icon.png" alt=""> <span> 23 </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!--------------- footer-section------------------ -->
+    <footer class="footer-main">
+        <div class="footer-parent">
+            <h1 class="reserver"> <span>Goal</span></h1>
+            <hr>
+            <div class="footer-item">
+                <div>
+                    <a target="_blank" class="footer-anchor" href="">Contact Us</a>
+                </div>
+                <div>
+                    <a target="_blank" class="footer-anchor" href="">Terms of Service</a>
+                </div>
+                <div>
+                    <a target="_blank" class="footer-anchor" href="">Privacy Policy</a>
+                </div>
+                <div>
+                    <a target="_blank" class="footer-anchor" href="">Privacy Settings</a>
+                </div>
+                <div>
+                    <a target="_blank" class="footer-anchor" href="">Goal App</a>
+                </div>
+                <div>
+                    <a target="_blank" class="footer-anchor" href="">Goal Live</a>
+                </div>
+
+            </div>
+            <div class="iconify-footer">
+                <div class="iconify-item">
+                    <iconify-icon icon="akar-icons:github-fill"></iconify-icon>
+                </div>
+                <div class="iconify-item">
+                    <iconify-icon icon="akar-icons:linkedin-box-fill"></iconify-icon>
+                </div>
+
+                <div class="iconify-item">
+                    <iconify-icon icon="akar-icons:whatsapp-fill"></iconify-icon>
+                </div>
+                <div class="iconify-item">
+                    <iconify-icon icon="akar-icons:youtube-fill"></iconify-icon>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
